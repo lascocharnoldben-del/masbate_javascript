@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // About ---------------------
-/* ================= NAVBAR SCROLL EFFECT ================= */
+
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
 
@@ -722,105 +722,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //============ gallery=================
 
-/**
- * global.js - Professional Catlog Interaction Controller
- */
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Initial Render of the unified 4-Column Grid System
-    initDestinationGrid();
+// GALLERY IMAGE CLICK EFFECT
+const galleryImages = document.querySelectorAll(".gallery-img");
 
-    // 2. Initialize dynamic destination switching mechanics
-    initDynamicSwapper();
+galleryImages.forEach((img) => {
+
+    img.addEventListener("click", function () {
+
+        // REMOVE ACTIVE CLASS FROM ALL
+        galleryImages.forEach((image) => {
+            image.classList.remove("active-img");
+        });
+
+        // ADD ACTIVE CLASS TO CLICKED IMAGE
+        this.classList.add("active-img");
+
+    });
+
 });
 
-/**
- * Global Dataset containing our specific image links, category filters, and destination metadata.
- * This matches the exact curated catlog look from the target mockup.
- */
-const destinationCatalog = [
-    { category: "coastal", title: "Pristine Island Shoreline", src: "images/beach1.jpg", alt: "Clear water and white sandbar" },
-    { category: "coastal", title: "Majestic Waterfall Lagoon", src: "images/waterfall.jpg", alt: "Waterfall cascading into green lagoon" },
-    { category: "coastal", title: "Palm-Fringed Beach", src: "images/beach2.jpg", alt: "Sunset view under palm trees" },
-    { category: "coastal", title: "Aerial Island Sandbar", src: "images/beach3.jpg", alt: "Aerial view of a thin sandbar" },
-    { category: "icons",   title: "Geological Rock Formations", src: "images/geology.jpg", alt: "Vertical stone strata cliff" },
-    { category: "icons",   title: "Historical Lighthouse Site", src: "images/lighthouse.jpg", alt: "Ancient stone lighthouse" },
-    { category: "icons",   title: "Unique Island Formation", src: "images/island.jpg", alt: "Rock formations jutting from turquoise water" },
-    { category: "icons",   title: "Aerial Coastal Watchtower", src: "images/ruins.jpg", alt: "Aerial perspective of coastal stone ruins" },
-    { category: "culture", title: "Heritage Heritage Site Church", src: "images/church.jpg", alt: "Ornate church facade" },
-    { category: "culture", title: "Old Town Heritage House", src: "images/house.jpg", alt: "Classic colonial architecture house" },
-    { category: "culture", title: "Rodeo Festival Parade", src: "images/rodeo.jpg", alt: "Horseback riders in parade" },
-    { category: "culture", title: "Mangrove Boardwalk Sunset", src: "images/sunset.jpg", alt: "Sunset over a wooden mangrove path" }
-];
+// NAVBAR SHADOW ON SCROLL
+window.addEventListener("scroll", function () {
 
-/**
- * Render Engine: Clears the existing view block and builds the unified 4-Column dynamic grid nodes.
- */
-function initDestinationGrid() {
-    const gridContainer = document.getElementById("destinationGridMatrix");
-    if (!gridContainer) return;
+    const navbar = document.querySelector(".navbar");
 
-    gridContainer.innerHTML = ""; // Wipe empty state nodes
+    if(window.scrollY > 50){
+        navbar.classList.add("shadow-lg");
+    }else{
+        navbar.classList.remove("shadow-lg");
+    }
 
-    destinationCatalog.forEach(dest => {
-        const catalogHTML = `
-            <div class="col-sm-6 col-md-6 col-lg-3 catalog-item" data-category="${dest.category}">
-                <div class="card catalog-card h-100">
-                    <img src="${dest.src}" class="card-img-top catalog-card-img" alt="${dest.alt || dest.title}">
-                </div>
-            </div>
-        `;
-        gridContainer.innerHTML += catalogHTML;
+});
+
+// SIMPLE FADE-IN ANIMATION
+const cards = document.querySelectorAll(".gallery-img");
+
+window.addEventListener("load", () => {
+
+    cards.forEach((card, index) => {
+
+        setTimeout(() => {
+            card.classList.add("show-img");
+        }, index * 100);
+
     });
 
-    console.log("Professional 4-Column Catlog Grid rendered successfully.");
-}
-
-/**
- * Interactive Mechanics: This function listens for dynamic change events and **replaces** images on screen.
- * (Replace your current simple replace/append function with this clean interaction engine).
- */
-function initDynamicSwapper() {
-    // 1. Hooking into the Destination category button triggers (All, Beaches, Historical, etc.)
-    const swapButtons = document.querySelectorAll(".filter-trigger");
-    const gridItems = document.querySelectorAll(".catalog-item");
-
-    if (!swapButtons.length || !gridItems.length) return;
-
-    swapButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            // Remove active green highlight state from old button, add to current
-            swapButtons.forEach(btn => btn.classList.remove("active", "btn-success"));
-            swapButtons.forEach(btn => btn.classList.add("btn-outline-secondary"));
-
-            button.classList.remove("btn-outline-secondary");
-            button.classList.add("active", "btn-success"); // Active green look alert focus shift state
-
-            const selectedFilter = button.getAttribute("data-filter");
-            const gridContainer = document.getElementById("destinationGridMatrix");
-
-            if (!gridContainer) return;
-
-            //Professional Fade-Swap Animation Mechanics
-            gridContainer.style.opacity = "0"; // Fade out existing grid system
-            gridContainer.style.transform = "scale(0.98)";
-
-            setTimeout(() => {
-                // Determine new visible state based on filters
-                gridItems.forEach(item => {
-                    const itemCategory = item.getAttribute("data-category");
-                    if (selectedFilter === "all" || itemCategory === selectedFilter) {
-                        item.style.display = "block"; // Show matched elements
-                    } else {
-                        item.style.display = "none"; // Hide non-matched elements
-                    }
-                });
-
-                // Fade back in with the new dynamic view block configuration
-                gridContainer.style.opacity = "1";
-                gridContainer.style.transform = "scale(1)";
-                console.log(`Replaced view block content for filter: "${selectedFilter}"`);
-
-            }, 300); // Wait for fade-out to finish
-        });
-    });
-}
+});
