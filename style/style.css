@@ -1,0 +1,941 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    padding: 15px 0;
+    background: rgba(13, 110, 253, 0.95) !important;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link{
+    font-weight: 500;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #dbeafe !important;
+}
+
+/* HERO */
+
+.hero{
+    height: 100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url('../image/p1.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero h1{
+    font-size: 4rem;
+    animation: fadeDown 1s ease;
+}
+
+.hero p{
+    font-size: 1.2rem;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero .btn{
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero .btn:hover{
+    transform: translateY(-4px);
+}
+
+/* SECTIONS */
+
+section{
+    padding: 90px 0;
+}
+
+section h2{
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+/* IMAGE */
+
+img{
+    transition: 0.4s ease;
+}
+
+img:hover{
+    transform: scale(1.03);
+}
+
+/* FEATURE CARDS */
+
+.feature-card{
+    border-radius: 20px;
+    transition: 0.35s ease;
+    background: #fff;
+}
+
+.feature-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+.feature-icon{
+    font-size: 3rem;
+}
+
+/* BUTTONS */
+
+.btn{
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+    background: #111827 !important;
+}
+
+footer h5{
+    font-weight: 600;
+}
+
+footer p,
+footer a{
+    color: rgba(255,255,255,0.8);
+    transition: 0.3s;
+}
+
+footer a:hover{
+    color: #0d6efd !important;
+    padding-left: 5px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeDown{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width: 768px){
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .navbar{
+        padding: 10px 0;
+    }
+
+    section{
+        padding: 70px 0;
+    }
+}
+
+/*Story----------------------------*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* cite: 3 */
+    color: #333;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+/* --- HERO BANNER --- */
+.story-header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../image/download.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* --- STORY BOX --- */
+.story-content {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: -50px auto 50px; /* Overlaps the header banner */
+    background: white;
+    padding: 40px;
+    border-radius: 15px; /* cite: 3 */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* --- TYPOGRAPHY --- */
+.dropcap {
+    float: left;
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #2d6a4f; /* Main brand green[cite: 3] */
+}
+
+.italic {
+    font-style: italic;
+    color: #555;
+    font-size: 1.25rem;
+}
+
+/* --- BUTTONS & NAVIGATION --- */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    padding: 8px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #2d6a4f; /* cite: 3 */
+    color: white;
+    transform: translateX(-5px);
+}
+
+.custom-btn {
+    border-radius: 5px; /* cite: 3 */
+    color: #2d6a4f; /* cite: 3 */
+    border-color: #2d6a4f; /* cite: 3 */
+    font-weight: 500; /* cite: 3 */
+}
+
+.custom-btn:hover {
+    background-color: #2d6a4f; /* cite: 3 */
+    color: white;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 2rem 0;
+}
+
+
+/*--------------------------about------------------------------------------------------------*/
+
+/* ================= GLOBAL ================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f8fb;
+  margin: 0;
+  padding: 0;
+}
+
+/* fix navbar spacing */
+body {
+  padding-top: 70px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #0d6efd;
+}
+
+.navbar-brand {
+  letter-spacing: 1px;
+}
+
+/* ================= HERO SECTION ================= */
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url("../image/download.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  animation: fadeDown 1s ease;
+}
+
+.about-hero p {
+  animation: fadeUp 1.2s ease;
+}
+
+/* ================= CONTENT ================= */
+main h2 {
+  color: #1e2a38;
+}
+
+main p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* image frame */
+.about-img-frame img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 15px;
+}
+
+.about-img-frame img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ================= CENTER "WHO WE ARE" SECTION ================= */
+
+/* center the whole left text column */
+main .row {
+  align-items: center;
+}
+
+/* center heading */
+main h2 {
+  text-align: center;
+}
+
+/* center paragraph text under it */
+main .col-md-6:first-child {
+  text-align: center;
+}
+
+/* optional: make it look cleaner */
+main p {
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+/* ================= FOOTER ================= */
+.footer-wide {
+  background: #111;
+  color: #ddd;
+  padding: 50px 0;
+}
+
+.footer-heading {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-wide a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-wide a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*destination-------------------------------------------------------------*/
+
+
+/* --- SITE BASE UTILITIES --- */
+body {
+    background-color: #fafafa; /* Clean, neutral light grey background */
+    color: #212529; /* Default dark gray text */
+}
+
+/* --- TOURIST DESTINATIONS TITLE BLOCK --- */
+.custom-page-title {
+    color: #000000 !important; /* Changed from green to solid black */
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+    border-bottom: none !important; /* Red underline completely removed */
+}
+
+/* Search inputs formatting attributes */
+.custom-search-input {
+    font-size: 1.05rem !important;
+    padding: 0.6rem 1rem !important;
+    color: #212529 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px !important;
+}
+
+.custom-search-input:focus {
+    border-color: #ced4da !important;
+    box-shadow: none !important;
+}
+
+/* Category filter select box styling */
+.custom-select-filter {
+    font-size: 1.05rem !important;
+    padding: 0.6rem 1rem !important;
+    color: #212529 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 6px !important;
+}
+
+/* --- DYNAMIC CARD COMPONENT LAYOUT DESIGN --- */
+.custom-destination-card {
+    border: 1px solid #e0e0e0 !important; /* Removed the green top border for a clean, neutral card */
+    border-radius: 6px !important;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.custom-destination-card .card-img-top {
+    height: 210px;
+    object-fit: cover;
+}
+
+/* --- DYNAMIC CATEGORY BADGES --- */
+/* Default badge style (for Beach, Lighthouse, Waterfall, etc.) */
+.badge-category {
+    background-color: #212529 !important; /* Dark black/gray badge background */
+    color: #ffffff !important; /* White text */
+    font-weight: 500;
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 4px !important;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+/* TARGETED STYLE FOR THE PARK BADGE */
+/* The Javascript adds text-capitalize, so we target both lowercase and capitalized versions just in case */
+.badge-category.park,
+.badge-category.Park {
+    background-color: #000000 !important; /* Black pill background */
+    color: #0d6efd !important; /* Blue font text */
+    font-weight: 600;
+}
+
+/* --- CARD TEXT DETAILS --- */
+.card-destination-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000; /* Solid black destination titles */
+    margin-bottom: 0.4rem;
+}
+
+.card-location-geo {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card-location-geo i {
+    color: #6c757d; /* Muted geo pinpoint icon */
+    margin-right: 4px;
+}
+
+.card-description-text {
+    color: #212529; /* Clean black font body description */
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+/* Meta info rows layout (Fee, Hours, Activities, Tip) */
+.meta-info-row {
+    font-size: 0.95rem;
+    color: #000000; /* Solid black font labels and text */
+    margin-bottom: 0.25rem;
+}
+
+/* Keeps your tips highlighted cleanly without using green */
+.meta-info-row.text-success {
+    color: #495057 !important; /* Neutral dark gray for tips fallback */
+}
+
+
+
+/*--------------------------------------------------------gallery---------------------*/
+
+/* ==========================================================================
+   GLOBAL CURATED CATALOG LAYOUT
+   ========================================================================== */
+:root {
+  --primary-blue: #1e75ff; /* Main branding blue color */
+  --catalog-grey: #fafafa;  /* Main page background */
+  --card-border: #ffffff;   /* Thick white card borders */
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Professional drop shadow */
+}
+
+body {
+  background-color: var(--catalog-grey);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #2b2d42;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   BLUE HEADER & MAIN TEXT
+   ========================================================================== */
+.custom-blue-navbar {
+  background: var(--primary-blue); /* Solid blue header banner */
+  padding: 1.5rem 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Large professional 'DESTINATIONS UNVEILED' main title */
+.unveiled-header {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: -1px;
+}
+
+/* Subsection Titles: 'Coastal Wonders', 'Icons of Masbate', etc. */
+.section-title {
+  color: #2b2d42;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  padding-left: 0.5rem;
+  border-left: 5px solid var(--primary-blue); /* Left accent bar */
+}
+
+/* ==========================================================================
+   UNIFORM PHOTO CATALOG GRID (4 Columns Natively)
+   ========================================================================== */
+.catalog-grid {
+  display: grid;
+  /* Fixed 4-column structure with professional spacing */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1rem;
+}
+
+/* Reusing the custom-destination-card ID to apply the professional drop shadow rule */
+#custom-destination-card {
+  border: 1px solid rgba(0,0,0,0.02) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+/* THEMED CATLOG CARD STRUCTURE */
+.catalog-item .card {
+  border: 3px solid var(--card-border) !important; /* Recreating the thick white picture borders */
+  border-radius: 8px !important;
+  box-shadow: var(--card-shadow) !important;
+  background-color: #ffffff;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.catalog-item .card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* CRUCIAL ASPECT RATIO ALIGNMENT ENGINE */
+.catalog-card-img {
+  width: 100%;
+  height: 220px;            /* Forces every single image to have the exact same uniform height */
+  object-fit: cover;       /* auto-crops image to fill bounding box without stretching or distortion */
+  object-position: center; /* Keeps the focus right in the middle of the scenery */
+  transition: transform 0.5s ease;
+}
+
+/* ==========================================================================
+   FOOTER PLAQUE & QUICK LINKS
+   ========================================================================== */
+.custom-dark-footer {
+  background-color: #1a1a1a !important; /* Deep dark footer background */
+}
+
+/* Bottom brass/gold collection plaque text */
+.plaque-gold-text {
+  color: #f7e099; /* Professional golden hue alert text */
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.03);
+  padding: 6px 15px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Footer heading color */
+.custom-dark-footer h5 {
+  color: #f7e099; /* Consistent golden hue title elements */
+}
+
+/* Footer standard paragraph text */
+.custom-dark-footer p {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+
+/*-------------------------------------------inquiry-----------------*/
+
+/* HERO */
+.inquiry-hero {
+  background: linear-gradient(rgba(0,0,0,0.6),
+              rgba(0,0,0,0.6)),
+              url("../image/image3.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  padding: 100px 20px;
+}
+
+/* CARD */
+.inquiry-card {
+  border: none;
+  border-radius: 15px;
+}
+
+/* INPUT */
+.form-control,
+.form-select {
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* BUTTON */
+.btn-primary {
+  padding: 12px;
+  border-radius: 30px;
+}
+
+/* ERROR */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+
+/*-------Trave tips--------*/
+
+body {
+    background-color: #fcfcfc;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #2b2d42;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   NAVIGATION HEADERS
+   ========================================================================== */
+.custom-blue-navbar {
+    background: linear-gradient(135deg, #1e75ff, #0056b3) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0.75rem 0;
+    transition: all 0.3s ease;
+}
+
+.custom-blue-navbar .navbar-brand {
+    letter-spacing: -0.5px;
+}
+
+.custom-blue-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.custom-blue-navbar .nav-link:hover,
+.custom-blue-navbar .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   PAGE SECTION TITLES
+   ========================================================================== */
+.custom-tips-title {
+    color: #1a1d20 !important;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+    display: inline-block;
+    position: relative;
+}
+
+/* Sleek subtle colored accent bar beneath the section headers */
+.custom-tips-title::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 4px;
+    background-color: #198754; /* Clean green accent color lines */
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   ACCORDION SYSTEMS
+   ========================================================================== */
+.custom-accordion {
+    border: none !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.custom-accordion-item {
+    border: 1px solid #eef1f6 !important;
+    margin-bottom: 8px;
+    border-radius: 6px !important;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.custom-accordion-item:hover {
+    border-color: #d8e2ef !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* Uncollapsed Button State */
+.custom-accordion .accordion-button {
+    background-color: #ffffff !important;
+    color: #495057 !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.15rem 1.5rem;
+    border: none;
+    box-shadow: none !important;
+}
+
+/* Expanded/Active Dropdown Panel State */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #f0f6ff !important; /* Elegant tint grid overlay background */
+    color: #0d6efd !important;
+    border-bottom: 1px solid #e2eeff;
+}
+
+/* Subtle icon spacing tweak */
+.custom-accordion .accordion-button i {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.custom-accordion .accordion-body {
+    background-color: #ffffff;
+    color: #4a5568;
+    font-size: 0.925rem;
+    line-height: 1.6;
+    padding: 1.25rem 1.5rem;
+}
+
+/* ==========================================================================
+   TRAVEL GUIDE 5-COLUMN MATRIX PANELS
+   ========================================================================== */
+.custom-guide-card {
+    border: 1px solid #f0f2f5 !important;
+    background-color: #fdfdfd !important; /* Ultra clean block background tint */
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.custom-guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06) !important;
+    border-color: #e2e8f0 !important;
+    background-color: #ffffff !important;
+}
+
+/* Bold Green Section Labels inside layout panels */
+.card-guide-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #198754 !important; /* Premium branding green */
+    letter-spacing: -0.2px;
+    margin-bottom: 0.5rem;
+}
+
+.card-guide-text {
+    line-height: 1.5;
+    color: #64748b !important;
+    font-size: 0.85rem !important;
+}
+
+/* ==========================================================================
+   FOOTERS
+   ========================================================================== */
+.custom-dark-footer {
+    background-color: #111418 !important;
+    border-top: 1px solid #212529;
+}
+
+.custom-dark-footer h5 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.custom-dark-footer a {
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.custom-dark-footer a:hover {
+    color: #ffffff !important;
+    padding-left: 4px;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT CONSTRAINTS
+   ========================================================================== */
+@media (min-width: 992px) {
+    .col-lg-2-custom {
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+}
+
+
+/*--------------------------culture-------------------------*/
+
+/* Custom Card Styles for Culture Gallery Grid */
+.custom-culture-card {
+  border-top: 5px solid #198754 !important; /* Green top boundary accent from your photo template */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover scaling micro-interaction */
+.custom-culture-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Image Uniform Crop Mechanics */
+.card-img-container {
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image perspective locked and clean */
+}
+
+/* Header Text Matching Photo Design colors */
+.custom-culture-card .card-title {
+  color: #198754; /* Deep thematic green title text */
+  font-size: 1.6rem;
+}
+
+/* Custom black pill badge requested to replace the original red scheme */
+.custom-badge-pill {
+  background-color: #212529; /* Deep Solid Black */
+  color: #ffffff;
+  text-align: center;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  width: 100%;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+/* Location Text and Pin Adjustments */
+.location-wrapper i {
+  color: #6c757d;
+}
+.location-wrapper span {
+  font-size: 0.95rem;
+}

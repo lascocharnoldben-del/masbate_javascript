@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+  <div class="container">
+     <a class="navbar-brand fw-bold d-inline-flex align-items-center" href="#">
+        <img src="image/image21.png" alt="Logo" class="me-2" style="height: 70px; width: auto; object-fit: contain;">
+        Explore Masbate
+      </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="destination.html">Destinations</a></li>
+         <li class="nav-item">
+            <a class="nav-link" href="travel_tips.html">
+              Travel Tips
+            </a>
+          </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Explore More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+            <li><a class="dropdown-item" href="inquiry.html">Inquiry</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br><br><br>
+
+<div class="container py-5 mt-4">
+
+  <div class="search-section-header mb-4">
+    <h2 class="custom-page-title">Tourist Destinations</h2>
+    
+    <div class="row g-3 mt-2">
+      <div class="col-md-6">
+        <input type="text" id="destinationSearch" class="form-control custom-search-input" placeholder="Search by name or municipality...">
+      </div>
+      <div class="col-md-6">
+        <select id="categoryFilter" class="form-select custom-select-filter">
+          <option value="all">All Categories</option>
+          <option value="beach">Beach</option>
+          <option value="park">Nature & Parks</option>
+          <option value="waterfall">Waterfalls</option>
+          <option value="lighthouse">Lighthouses</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4" id="destinationsGrid"></div>
+
+  <div id="noResultsMessage" class="text-center py-5 d-none">
+    <i class="bi bi-exclamation-circle text-muted fs-1"></i>
+    <p class="mt-2 text-muted fw-semibold">No destinations match your criteria.</p>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p class="mb-1"><i class="bi bi-telephone text-muted me-2"></i> 0912-918-7411</p>
+        <p><i class="bi bi-envelope text-muted me-2"></i> kiko@gmail.com</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <h5>Quick Links</h5>
+        <p class="mb-1"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></p>
+        <p class="mb-1"><a href="about.html" class="text-white-50 text-decoration-none">About</a></p>
+        <p><a href="destination.html" class="text-white-50 text-decoration-none">Destinations</a></p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <h5>Explore More</h5>
+        <p class="text-white-50">Discover pristine hidden gems, majestic falls, and historical wonders nearby.</p>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <p class="text-center text-white-50 mb-0">© 2026 Explore Destinations</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="javascript/index.js"></script>
+</body>
+</html>
