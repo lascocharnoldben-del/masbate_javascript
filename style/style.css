@@ -74,7 +74,25 @@ body{
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* GALLERY TITLE */
+/* MAKE EXPERIENCE IMAGE BIG AND CLEAN */
+.big-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* CENTER HEADINGS */
+h1, h2 {
+    color: #0d6efd;
+}
+
+/* IMPROVE SECTION SPACING */
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 .custom-gallery-title{
     font-size: 3rem;
     font-weight: bold;
