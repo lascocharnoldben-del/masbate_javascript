@@ -161,14 +161,16 @@ if (aboutImg) {
 // destination ---------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-    
-    // 1. ALL 20 FAMOUS MASBATE TOURIST SPOTS (100% COMPLETE DATASET)
+
+    // =============================
+    // ALL 20 TOURIST SPOTS (UNCHANGED)
+    // =============================
     const destinations = [
         {
             name: "Buntod Reef Marine Sanctuary",
             municipality: "Masbate City",
             category: "beach",
-            image: "image/image1.jpg", 
+            image: "image/image1.jpg",
             description: "A pristine white sandbar and mangrove sanctuary offering crystal clear waters. Best Time to Visit: Low tide and sunset.",
             address: "Barangay Nursery & Tugbo, Masbate City",
             fee: "₱20 adults / ₱10–15 children (Boat Fee: ₱500–₱800 roundtrip)",
@@ -180,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Catandayagan Falls",
             municipality: "Mobo",
             category: "waterfall",
-            image: "image/image2.jpg", 
+            image: "image/image2.jpg",
             description: "A rare and spectacular natural wonder featuring a majestic waterfall flowing directly into the open ocean.",
             address: "Ticao Island, Mobo, Masbate",
             fee: "Around ₱50–₱100",
@@ -190,9 +192,9 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Ticao Island",
-            municipality: "San Jacinto", // Matches the municipality location
+            municipality: "San Jacinto",
             category: "park",
-            image: "image/image3.jpg", 
+            image: "image/image3.jpg",
             description: "Known for marine biodiversity, breathtaking dive spots, and peaceful, quiet beaches.",
             address: "Eastern Masbate Province",
             fee: "Depends on resort or tour",
@@ -204,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Manta Bowl Shoal",
             municipality: "San Jacinto",
             category: "park",
-            image: "image/image4.jpg", 
+            image: "image/image4.jpg",
             description: "A world-renowned underwater shoal famous as a cleaning station for giant manta rays and whale sharks.",
             address: "Near Ticao Island",
             fee: "Dive packages start around ₱2,500+",
@@ -216,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Palani White Beach",
             municipality: "Balud",
             category: "beach",
-            image: "image/image5.jpg", 
+            image: "image/image5.jpg",
             description: "An expansive, pristine stretch of powdery white sand beach perfect for unwinding and catching beautiful sunsets.",
             address: "Balud, Masbate",
             fee: "Usually free or minimal fee",
@@ -228,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Animasola Island",
             municipality: "San Pascual",
             category: "beach",
-            image: "image/image6.jpg", 
+            image: "image/image6.jpg",
             description: "An awe-inspiring island famous for its unique, massive, layered rock formations sculpted by waves.",
             address: "Burias Group of Islands",
             fee: "Included in island hopping tours",
@@ -240,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Tinalisayan Island",
             municipality: "San Pascual",
             category: "beach",
-            image: "image/image7.jpg", 
+            image: "image/image7.jpg",
             description: "A breathtaking island paradise with clear turquoise waters and a gorgeous sandbar strip.",
             address: "Burias Island area",
             fee: "Included in tours",
@@ -252,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Sombrero Island",
             municipality: "San Pascual",
             category: "beach",
-            image: "image/image8.jpg", 
+            image: "image/image8.jpg",
             description: "A picturesque beach escape easily recognized by its distinctive rock outline shaped like a hat.",
             address: "Burias Islands",
             fee: "Included in island hopping",
@@ -264,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Halea Nature Park",
             municipality: "Mobo",
             category: "park",
-            image: "image/image9.jpg", 
+            image: "image/image9.jpg",
             description: "A secluded nature sanctuary featuring clear coves, lush foliage, and thriving marine life ecosystems.",
             address: "Mobo, Masbate",
             fee: "Around ₱50–₱100",
@@ -276,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Pawa Mangrove Nature Park",
             municipality: "Masbate City",
             category: "park",
-            image: "image/image10.webp", 
+            image: "image/image10.webp",
             description: "Masbate's largest mangrove area, showcasing a scenic wooden boardwalk running through natural wooden wetlands.",
             address: "Pawa, Masbate City",
             fee: "Around ₱20",
@@ -288,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Mayong Payong Eco Park",
             municipality: "Milagros",
             category: "park",
-            image: "image/image11.webp", 
+            image: "image/image11.webp",
             description: "An eco-adventure hilltop park known for its rolling green rice terraces and stunning mountain landscapes.",
             address: "Milagros, Masbate",
             fee: "₱20–₱50",
@@ -300,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Mangrovetum",
             municipality: "Masbate City",
             category: "park",
-            image: "image/image12.jpg", 
+            image: "image/image12.jpg",
             description: "A dedicated environmental park showcasing lush protective mangrove species right along the coastline.",
             address: "Masbate City Port Area",
             fee: "Around ₱20",
@@ -312,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "St. Anthony of Padua Cathedral",
             municipality: "Masbate City",
             category: "historical",
-            image: "image/image13.jpg", 
+            image: "image/image13.jpg",
             description: "The historical Roman Catholic seat of Masbate, showcasing beautiful old-world architecture and deep heritage.",
             address: "Masbate City Proper",
             fee: "Free",
@@ -324,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Villa Bayot",
             municipality: "Masbate City",
             category: "historical",
-            image: "image/image14.jpg", 
+            image: "image/image14.jpg",
             description: "An ancestral heritage house offering a window into the rich historical and cultural eras of early Masbate families.",
             address: "Masbate City",
             fee: "Usually free",
@@ -336,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Aroroy Lighthouse",
             municipality: "Aroroy",
             category: "lighthouse",
-            image: "image/image15.jpg", 
+            image: "image/image15.jpg",
             description: "A beautiful coastal beacon providing sweeping, panoramic views of the sea shipping lanes.",
             address: "Aroroy, Masbate",
             fee: "Free",
@@ -348,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Bugui Point Lighthouse",
             municipality: "Aroroy",
             category: "lighthouse",
-            image: "image/image16.png", 
+            image: "image/image16.png",
             description: "A historic stone structure perched dramatically on high sea-cliffs, capturing incredible wind-swept ocean views.",
             address: "Bugui Point, Masbate",
             fee: "Free",
@@ -360,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Bat-ongan Cave",
             municipality: "Mobo",
             category: "historical",
-            image: "image/image17.png", 
+            image: "image/image17.png",
             description: "A massive, mysterious limestone rock monolith standing in the wilderness, featuring historic cavern rooms.",
             address: "Mobo, Masbate",
             fee: "₱30–₱50",
@@ -370,9 +372,9 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Borobangcaso Islet and Rock Formation",
-            municipality: "Monreal", // Located in Monreal near Ticao
+            municipality: "Monreal",
             category: "beach",
-            image: "image/image18.jpg", 
+            image: "image/image18.jpg",
             description: "A pristine islet featuring a distinctive stack of large limestone rocks alongside an untouched white beach patch.",
             address: "Near Ticao Island",
             fee: "Included in island hopping",
@@ -384,7 +386,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Masbate Rodeo Festival",
             municipality: "Masbate City",
             category: "historical",
-            image: "image/image19.jpg", 
+            image: "image/image19.jpg",
             description: "The biggest annual celebration in the province, celebrating Masbate's status as the Rodeo Capital.",
             address: "Masbate City Grandstand / Public Arenas",
             fee: "Mostly free public events",
@@ -394,9 +396,9 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Matayum Lagoon",
-            municipality: "Cataingan", // Located in Cataingan, Masbate
+            municipality: "Cataingan",
             category: "park",
-            image: "image/image20.jpg", 
+            image: "image/image20.jpg",
             description: "A peaceful, reflective body of water surrounded by quiet landscapes, perfect for winding down.",
             address: "Masbate Province",
             fee: "Around ₱20–₱50",
@@ -406,66 +408,86 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // DOM Target Elements from your exact HTML
+    // =============================
+    // SAFE DOM REFERENCES
+    // =============================
     const gridContainer = document.getElementById("destinationsGrid");
     const searchInput = document.getElementById("destinationSearch");
     const categoryFilter = document.getElementById("categoryFilter");
     const noResultsMessage = document.getElementById("noResultsMessage");
 
-    // 2. DYNAMIC CARD RENDER ENGINE
-    function renderDestinationsGrid(dataList) {
-        gridContainer.innerHTML = ""; // Wipe grid elements before adding updated items
+    if (!gridContainer || !searchInput || !categoryFilter || !noResultsMessage) {
+        console.error("Missing destination HTML elements");
+        return;
+    }
 
-        if (dataList.length === 0) {
+    // =============================
+    // RENDER FUNCTION
+    // =============================
+    function renderDestinationsGrid(dataList) {
+
+        gridContainer.innerHTML = "";
+
+        if (!dataList.length) {
             noResultsMessage.classList.remove("d-none");
             return;
         }
+
         noResultsMessage.classList.add("d-none");
 
         dataList.forEach(item => {
-            const cardHTML = `
+            gridContainer.innerHTML += `
                 <div class="col-md-6 col-lg-4">
                     <div class="card custom-destination-card h-100">
                         <img src="${item.image}" class="card-img-top" alt="${item.name}">
                         <div class="card-body p-4">
-                            <span class="badge badge-category text-capitalize">${item.category}</span>
-                            <h3 class="card-destination-name">${item.name}</h3>
-                            
-                            <div class="card-location-geo">
-                                <i class="bi bi-geo-alt-fill"></i> ${item.municipality}
+
+                            <span class="badge badge-category text-capitalize">
+                                ${item.category}
+                            </span>
+
+                            <h3>${item.name}</h3>
+
+                            <div>
+                                <i class="bi bi-geo-alt-fill"></i>
+                                ${item.municipality}
                             </div>
-                            
-                            <p class="card-description-text">${item.description}</p>
-                            
-                            <hr class="text-muted opacity-25">
-                            
-                            <div class="meta-info-row"><strong>Address:</strong> ${item.address}</div>
-                            <div class="meta-info-row"><strong>Fee:</strong> ${item.fee}</div>
-                            <div class="meta-info-row"><strong>Hours:</strong> ${item.hours}</div>
-                            <div class="meta-info-row"><strong>Activities:</strong> ${item.activities}</div>
-                            <div class="meta-info-row text-success"><strong>Tip:</strong> ${item.tip}</div>
+
+                            <p>${item.description}</p>
+
+                            <hr>
+
+                            <small><b>Address:</b> ${item.address}</small><br>
+                            <small><b>Fee:</b> ${item.fee}</small><br>
+                            <small><b>Hours:</b> ${item.hours}</small><br>
+                            <small><b>Activities:</b> ${item.activities}</small><br>
+                            <small class="text-success"><b>Tip:</b> ${item.tip}</small>
+
                         </div>
                     </div>
                 </div>
             `;
-            gridContainer.innerHTML += cardHTML;
         });
     }
 
-    // 3. SEAMLESS FILTER PROCESSOR (Handles "All Categories" + Input text cross-checks)
+    // =============================
+    // FILTER ENGINE (SAFE)
+    // =============================
     function executeFilterEngine() {
-        const queryText = searchInput.value.toLowerCase().trim();
-        const selectedCategory = categoryFilter.value.toLowerCase();
+
+        const queryText = (searchInput.value || "").toLowerCase().trim();
+        const selectedCategory = (categoryFilter.value || "").toLowerCase();
 
         const filteredResults = destinations.filter(item => {
-            // Text comparison check across Names, Municipalities, and full Addresses
-            const matchesText = item.name.toLowerCase().includes(queryText) || 
-                                item.municipality.toLowerCase().includes(queryText) ||
-                                item.address.toLowerCase().includes(queryText);
-            
-            // "all" evaluation allows every single category type to pass down the line
-            const matchesCategory = (selectedCategory === "all") || 
-                                    (item.category.toLowerCase() === selectedCategory);
+
+            const matchesText =
+                item.name.toLowerCase().includes(queryText) ||
+                item.municipality.toLowerCase().includes(queryText) ||
+                item.address.toLowerCase().includes(queryText);
+
+            const matchesCategory =
+                selectedCategory === "all" ||
+                item.category.toLowerCase() === selectedCategory;
 
             return matchesText && matchesCategory;
         });
@@ -473,12 +495,14 @@ document.addEventListener("DOMContentLoaded", function () {
         renderDestinationsGrid(filteredResults);
     }
 
-    // Bind real-time input event listeners
+    // =============================
+    // EVENTS
+    // =============================
     searchInput.addEventListener("input", executeFilterEngine);
     categoryFilter.addEventListener("change", executeFilterEngine);
 
-    // Initial baseline pass execution to run on program load setup
     executeFilterEngine();
+
 });
 
 
