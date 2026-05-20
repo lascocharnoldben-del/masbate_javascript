@@ -428,152 +428,23 @@ main p {
 
 /*destination-------------------------------------------------------------*/
 
-body {
-    background-color: #f8f9fa; /* Soft background contrast */
-    padding-top: 56px; /* Smooth spacing adjustment for fixed-top navbar */
-}
-
-/* Ensure spacing element doesn't create massive blank voids */
-div[style*="height: 100px;"] {
-    height: 40px !important; 
-}
-
-/* ==========================================================================
-   2. HEADER & SEARCH SECTIONS (Fixes the visual bugs in the screenshot)
-   ========================================================================== */
-.custom-page-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
-}
-
-.search-section-header {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.custom-search-input, 
-.custom-select-filter {
-    height: 50px;
-    border-radius: 8px;
-    border: 1px solid #ced4da;
-    padding-left: 15px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.custom-search-input:focus, 
-.custom-select-filter:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
-}
-
-/* ==========================================================================
-   3. DESTINATION DYNAMIC CARDS (Styles elements injected by your JS)
-   ========================================================================== */
-#destinationsGrid {
-    margin-top: 20px;
-}
-
-.custom-destination-card {
-    border: none;
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-.custom-destination-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-}
-
-.custom-destination-card .card-img-top {
-    height: 240px;
-    object-fit: cover;
-    width: 100%;
-}
-
-.card-destination-name {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 8px;
-    color: #212529;
-}
-
-.badge-category {
-    background-color: #e7f1ff;
-    color: #0d6efd;
-    padding: 6px 12px;
-    font-weight: 600;
-    font-size: 0.8rem;
-    border-radius: 30px;
-    letter-spacing: 0.5px;
-}
-
-.card-location-geo {
-    color: #6c757d;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.card-location-geo i {
-    color: #dc3545; /* Crimson indicator marker */
-}
-
-.card-description-text {
-    font-size: 0.95rem;
-    color: #495057;
-    line-height: 1.6;
-}
-
-.meta-info-row {
-    font-size: 0.9rem;
-    margin-bottom: 6px;
-    color: #495057;
-}
-
-.meta-info-row strong {
-    color: #212529;
-}
-
-/* ==========================================================================
-   4. FOOTER FINE-TUNING
-   ========================================================================== */
-footer {
-    border-top: 4px solid #212529;
-}
-
-footer h5 {
-    font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-}
-
-
-
 /* ==========================================================================
    1. GLOBAL & LAYOUT ADJUSTMENTS
    ========================================================================== */
 body {
-    background-color: #f8f9fa; /* Soft background contrast */
-    padding-top: 56px; /* Smooth spacing adjustment for fixed-top navbar */
+    background-color: #f8f9fa; 
+    padding-top: 56px; 
 }
 
-/* Ensure spacing element doesn't create massive blank voids */
+/* Fixes fixed navbar spacing issues safely */
 div[style*="height: 100px;"] {
-    height: 40px !important; 
+    height: 50px !important; 
+    display: block;
+    clear: both;
 }
 
 /* ==========================================================================
-   2. HEADER & SEARCH SECTIONS (Fixes the visual bugs in the screenshot)
+   2. HEADER & SEARCH SECTIONS (Fixes grid collapse bugs)
    ========================================================================== */
 .custom-page-title {
     font-size: 2.5rem;
@@ -588,6 +459,8 @@ div[style*="height: 100px;"] {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px !important; /* Forces spacing below the search area */
+    display: block; /* Ensures it acts as a structural block element */
 }
 
 .custom-search-input, 
@@ -598,6 +471,7 @@ div[style*="height: 100px;"] {
     padding-left: 15px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    width: 100%; /* Guarantees fields occupy full column width */
 }
 
 .custom-search-input:focus, 
@@ -607,10 +481,14 @@ div[style*="height: 100px;"] {
 }
 
 /* ==========================================================================
-   3. DESTINATION DYNAMIC CARDS (Styles elements injected by your JS)
+   3. DESTINATION GRID & CARDS (Forces display structural integrity)
    ========================================================================== */
 #destinationsGrid {
-    margin-top: 20px;
+    display: flex !important; /* Forces Bootstrap columns to respect layout engine */
+    flex-wrap: wrap !important; 
+    margin-top: 20px !important;
+    min-height: 400px; /* Guarantees structural room so cards don't drop behind footer */
+    clear: both;
 }
 
 .custom-destination-card {
@@ -620,6 +498,7 @@ div[style*="height: 100px;"] {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     background: #ffffff;
+    margin-bottom: 24px; /* Space between card rows */
 }
 
 .custom-destination-card:hover {
@@ -649,6 +528,7 @@ div[style*="height: 100px;"] {
     font-size: 0.8rem;
     border-radius: 30px;
     letter-spacing: 0.5px;
+    display: inline-block;
 }
 
 .card-location-geo {
@@ -659,7 +539,7 @@ div[style*="height: 100px;"] {
 }
 
 .card-location-geo i {
-    color: #dc3545; /* Crimson indicator marker */
+    color: #dc3545; 
 }
 
 .card-description-text {
@@ -683,6 +563,9 @@ div[style*="height: 100px;"] {
    ========================================================================== */
 footer {
     border-top: 4px solid #212529;
+    position: relative;
+    z-index: 10;
+    clear: both;
 }
 
 footer h5 {
@@ -690,6 +573,7 @@ footer h5 {
     margin-bottom: 20px;
     letter-spacing: 0.5px;
 }
+
 
 /*-------------------------------------------inquiry-----------------*/
 
