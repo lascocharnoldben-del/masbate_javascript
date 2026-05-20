@@ -160,7 +160,6 @@ if (aboutImg) {
 
 // destination ---------------------------
 
-
 document.addEventListener("DOMContentLoaded", function () {
     
     // 1. ALL 20 FAMOUS MASBATE TOURIST SPOTS (100% COMPLETE DATASET)
@@ -481,6 +480,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial baseline pass execution to run on program load setup
     executeFilterEngine();
 });
+
+
 
 
 //---------------------------------------------inquiry----------------------
